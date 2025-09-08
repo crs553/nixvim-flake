@@ -10,6 +10,7 @@
             cowsay # print a cow
             fd
             fortune # get a quote
+            gh
             gofumpt
             golangci-lint
             golines
@@ -58,8 +59,29 @@
                 })
     '';
 
+    performance = {
+        byteCompileLua = {
+            enable = true;
+            nvimRuntime = true;
+            plugins = true;
+        };
+
+        combinePlugins = {
+            enable = true;
+
+            standalonePlugins = with pkgs.vimPlugins; [
+                conform-nvim
+                mini-nvim
+                nvim-jdtls
+                nvim-treesitter
+                oil-nvim
+                snacks-nvim
+            ];
+        };
+    };
+
 # Import all your configuration modules here
-    imports = [ 
+    imports = [
         ./plugins/blink-cmp.nix
         ./plugins/cmp.nix
         ./plugins/conform.nix
@@ -68,8 +90,9 @@
         ./plugins/harpoon.nix
         ./plugins/lsp.nix
         ./plugins/lualine.nix
-        ./plugins/oil.nix 
+        ./plugins/oil.nix
         ./plugins/smear.nix
+        ./plugins/snacks.nix
         ./plugins/telescope.nix
         ./plugins/toggleterm.nix
         ./plugins/treesitter.nix
