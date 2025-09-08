@@ -1,6 +1,15 @@
 {
   plugins = {
-    oil.enable = true;
+    oil = {
+      enable = true;
+      settings = {
+        win_options = {
+          signcolumn = "yes:2";
+	};
+      };
+    };
+
+    oil-git-status.enable = true;
     web-devicons.enable = true;
   };
 }

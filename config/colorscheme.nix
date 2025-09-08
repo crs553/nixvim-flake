@@ -21,5 +21,6 @@
 	};
 	#term_colors = true;
       };
+    };
   };
 }
