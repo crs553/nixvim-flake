@@ -1,5 +1,38 @@
+{pkgs,...}:
 {
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
+  extraPackages = with pkgs; [
+        # alejandra
+        # lldb
+        (python3.withPackages (python-pkgs: [ python-pkgs.pylatexenc ]))
+        black
+        cowsay # print a cow
+        fd
+        fortune # get a quote
+        gofumpt
+        golangci-lint
+        golines
+        imagemagick
+        isort
+        jq
+        jupyter
+        nixpkgs-fmt
+        nodePackages.prettier
+        openssl
+        postgresql
+        prettierd
+        ripgrep
+        rust-analyzer
+        rustfmt
+        shfmt
+        sqlite
+        tectonic
+        stylua
+        terraform
+        #websocat
+        wordnet
+  ];
   globals = {
     localleader = " ";
     globalleader = " ";
@@ -17,6 +50,8 @@
 
   # Import all your configuration modules here
   imports = [ 
+    ./plugins/blink-cmp.nix
+    ./plugins/conform.nix
     ./plugins/dap.nix
     ./plugins/fugitive.nix
     ./plugins/harpoon.nix

@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  blink-cmp = {
+  plugins.blink-cmp = {
     enable = true;
 
     settings = {
@@ -214,4 +214,12 @@
       };
     };
   };
+  plugins.blink-cmp-dictionary = {
+      enable = true;
+      autoLoad = true;
+  };
+  blink-cmp-git = {
+      enable = true;
+      autoLoad = true;
+  }; 
 }
