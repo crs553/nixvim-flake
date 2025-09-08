@@ -11,8 +11,8 @@
         "<C-n>" = "cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert }";
         "<C-u>" = "cmp.mapping.complete({})";
         "<C-p>" = "cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert }";
-        "<C-y>" = ''
-          cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }, {"i", "c"})'';
+        "<C-y>" =
+          ''cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }, {"i", "c"})'';
         "<C-space>" = ''
           cmp.mapping {
             i = cmp.mapping.complete(),
@@ -44,11 +44,17 @@
         { name = "nvim_lsp"; }
         {
           name = "luasnip";
-          option = { show_autosnippets = true; };
+          option = {
+            show_autosnippets = true;
+          };
         }
         { name = "path"; }
         { name = "buffer"; }
       ];
     };
   };
+  cmp-cmdline.enable = true;
+  cmp-dap.enable = true;
+  cmp-nvim-lsp.enable = true;
+
 }

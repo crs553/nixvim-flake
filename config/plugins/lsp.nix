@@ -31,4 +31,6 @@
       };
     };
   };
+  plugins.lspkind.enable = true;
+  plugins.lspsaga.enable = true;
 }

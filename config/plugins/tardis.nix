@@ -1,0 +1,3 @@
+{
+  plugins.tardis.enable = true;
+}
