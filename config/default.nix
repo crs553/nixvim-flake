@@ -61,6 +61,7 @@
 # Import all your configuration modules here
     imports = [ 
         ./plugins/blink-cmp.nix
+        ./plugins/cmp.nix
         ./plugins/conform.nix
         ./plugins/dap.nix
         ./plugins/fugitive.nix
