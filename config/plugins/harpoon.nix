@@ -1,5 +1,5 @@
 {
-  harpoon = {
+  plugins.harpoon = {
     enable = true;
     enableTelescope = false;
   };
