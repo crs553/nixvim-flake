@@ -137,6 +137,7 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
+    ./plugins/vimbegood.nix
 
     ./keymap.nix
     ./colorscheme.nix
