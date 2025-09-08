@@ -20,7 +20,7 @@
         enable = true;
 
         settings = {
-          formatting.command = [ "nixpkgs-fmt" ];
+          formatting.command = [ "nixfmt" ];
           nixpkgs.expr = "import <nixpkgs> {}";
         };
       };

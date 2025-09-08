@@ -1,119 +1,119 @@
-{pkgs,...}:
+{ pkgs, ... }:
 {
-    globals = {
-        mapleader = " ";
-        maplocalleader= ",";
-        markdown_folding = true;
-    };
-    nixpkgs.config.allowUnfreePredicate = _: true;
+  globals = {
+    mapleader = " ";
+    maplocalleader = ",";
+    markdown_folding = true;
+  };
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
-    extraPackages = with pkgs; [
-# alejandra
-# lldb
-        (python3.withPackages (python-pkgs: [ python-pkgs.pylatexenc ]))
-            black
-            cowsay # print a cow
-            fd
-            fortune # get a quote
-            gh
-            gofumpt
-            golangci-lint
-            golines
-            imagemagick
-            isort
-            jq
-            jupyter
-            nixpkgs-fmt
-            nodePackages.prettier
-            openssl
-            postgresql
-            prettierd
-            ripgrep
-            rust-analyzer
-            rustfmt
-            shfmt
-            sqlite
-            tectonic
-            stylua
-            terraform
-#websocat
-            wordnet
-            ];
+  extraPackages = with pkgs; [
+    # alejandra
+    # lldb
+    (python3.withPackages (python-pkgs: [ python-pkgs.pylatexenc ]))
+    black
+    cowsay # print a cow
+    fd
+    fortune # get a quote
+    gh
+    gofumpt
+    golangci-lint
+    golines
+    imagemagick
+    isort
+    jq
+    jupyter
+    nixfmt-rfc-style
+    nodePackages.prettier
+    openssl
+    postgresql
+    prettierd
+    ripgrep
+    rust-analyzer
+    rustfmt
+    shfmt
+    sqlite
+    tectonic
+    stylua
+    terraform
+    #websocat
+    wordnet
+  ];
 
-    extraPlugins = with pkgs.vimPlugins; [
-        lazydev-nvim
-            nvim-jdtls
-            #vim-dadbod
-            #vim-dadbod-completion
-            #vim-dadbod-ui
-            #vim-table-mode
-            luasnip
-    ];
+  extraPlugins = with pkgs.vimPlugins; [
+    lazydev-nvim
+    nvim-jdtls
+    #vim-dadbod
+    #vim-dadbod-completion
+    #vim-dadbod-ui
+    #vim-table-mode
+    luasnip
+  ];
 
-    extraPython3Packages = p: [
-        p.ipykernel
-            p.jupyter-client
-            p.numpy
-            p.plotly
-            p.pnglatex
-            p.pynvim
-            p.pyperclip
-    ];
+  extraPython3Packages = p: [
+    p.ipykernel
+    p.jupyter-client
+    p.numpy
+    p.plotly
+    p.pnglatex
+    p.pynvim
+    p.pyperclip
+  ];
 
-    extraConfigLua = ''
-        vim.diagnostic.config({
-                virtual_text = true,
-                signs = true,
-                update_in_insert = false,
-                underline = true,
-                severity_sort = true,
-                })
-    '';
+  extraConfigLua = ''
+    vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            update_in_insert = false,
+            underline = true,
+            severity_sort = true,
+            })
+  '';
 
-    viAlias=true;
-    vimAlias=true;
+  viAlias = true;
+  vimAlias = true;
 
-    performance = {
-        byteCompileLua = {
-            enable = true;
-            nvimRuntime = true;
-            plugins = true;
-        };
-
-        #combinePlugins = {
-        #    enable = true;
-
-        #    standalonePlugins = with pkgs.vimPlugins; [
-        #        conform-nvim
-        #        mini-nvim
-        #        nvim-jdtls
-        #        nvim-treesitter
-        #        oil-nvim
-        #        snacks-nvim
-        #    ];
-        #};
+  performance = {
+    byteCompileLua = {
+      enable = true;
+      nvimRuntime = true;
+      plugins = true;
     };
 
-# Import all your configuration modules here
-    imports = [
-        ./plugins/blink-cmp.nix
-        ./plugins/cmp.nix
-        ./plugins/conform.nix
-        ./plugins/dap.nix
-        ./plugins/fugitive.nix
-        ./plugins/harpoon.nix
-        ./plugins/lsp.nix
-        ./plugins/lualine.nix
-        ./plugins/oil.nix
-        ./plugins/smear.nix
-        ./plugins/snacks.nix
-        ./plugins/telescope.nix
-        ./plugins/toggleterm.nix
-        ./plugins/treesitter.nix
+    #combinePlugins = {
+    #    enable = true;
 
-        ./keymap.nix
-        ./colorscheme.nix
-        ./options.nix
+    #    standalonePlugins = with pkgs.vimPlugins; [
+    #        conform-nvim
+    #        #mini-nvim
+    #        #nvim-jdtls
+    #        #nvim-treesitter
+    #        oil-nvim
+    #        #snacks-nvim
+    #    ];
+    #};
+  };
 
-    ];
+  # Import all your configuration modules here
+  imports = [
+    ./plugins/blink-cmp.nix
+    ./plugins/cmp.nix
+    ./plugins/conform.nix
+    ./plugins/dap.nix
+    ./plugins/fugitive.nix
+    ./plugins/harpoon.nix
+    ./plugins/lsp.nix
+    ./plugins/lualine.nix
+    ./plugins/oil.nix
+    ./plugins/smear.nix
+    ./plugins/snacks.nix
+    ./plugins/telescope.nix
+    ./plugins/toggleterm.nix
+    ./plugins/treesitter.nix
+
+    ./keymap.nix
+    ./colorscheme.nix
+    ./options.nix
+
+  ];
 }

@@ -2,7 +2,7 @@
   opts = {
     number = true;
     relativenumber = true;     # Show the line number relative to the line with the cursor in front of each line.
-    clipboard = "unnamedplus"; # uses the clipboard register for all operations except yank.                                                                      
+    clipboard = "unnamedplus"; # uses the clipboard register for all operations except yank.
     syntax = "on";             # When this option is set, the syntax with this name is loaded.
     autoindent = true;         # Copy indent from current line when starting a new line.
     cursorline = true;         # Highlight the screen line of the cursor with CursorLine.

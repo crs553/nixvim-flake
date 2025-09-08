@@ -221,7 +221,7 @@
   plugins.blink-cmp-git = {
       enable = true;
       autoLoad = true;
-  }; 
+  };
   plugins.blink-ripgrep = {
       enable = true;
       autoLoad = true;

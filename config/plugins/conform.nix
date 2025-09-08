@@ -18,6 +18,7 @@
         rust = [ "rustfmt" ];
         sh = [ "shfmt" ];
         terraform = [ "terraform_fmt" ];
+        nix = ["nixfmt"];
       };
 
       format_on_save = ''

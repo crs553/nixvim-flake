@@ -17,7 +17,7 @@
       silent = true;
     };
   }
- {
+  {
     mode = "n";
     key = "<leader>ff";
     action = "<cmd>lua require('snacks').picker.files()<CR>";
@@ -72,4 +72,3 @@
     };
   }
 ]
-
