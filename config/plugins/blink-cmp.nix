@@ -218,8 +218,12 @@
       enable = true;
       autoLoad = true;
   };
-  blink-cmp-git = {
+  plugins.blink-cmp-git = {
       enable = true;
       autoLoad = true;
   }; 
+  plugins.blink-ripgrep = {
+      enable = true;
+      autoLoad = true;
+  };
 }
