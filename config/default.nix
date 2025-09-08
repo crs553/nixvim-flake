@@ -1,5 +1,10 @@
 {pkgs,...}:
 {
+    globals = {
+        mapleader = " ";
+        maplocalleader= ",";
+        markdown_folding = true;
+    };
     nixpkgs.config.allowUnfreePredicate = _: true;
 
     extraPackages = with pkgs; [
@@ -44,10 +49,16 @@
             #vim-table-mode
             luasnip
     ];
-    globals = {
-        localleader = " ";
-        globalleader = " ";
-    };
+
+    extraPython3Packages = p: [
+        p.ipykernel
+            p.jupyter-client
+            p.numpy
+            p.plotly
+            p.pnglatex
+            p.pynvim
+            p.pyperclip
+    ];
 
     extraConfigLua = ''
         vim.diagnostic.config({
@@ -59,6 +70,9 @@
                 })
     '';
 
+    viAlias=true;
+    vimAlias=true;
+
     performance = {
         byteCompileLua = {
             enable = true;
@@ -66,18 +80,18 @@
             plugins = true;
         };
 
-        combinePlugins = {
-            enable = true;
+        #combinePlugins = {
+        #    enable = true;
 
-            standalonePlugins = with pkgs.vimPlugins; [
-                conform-nvim
-                mini-nvim
-                nvim-jdtls
-                nvim-treesitter
-                oil-nvim
-                snacks-nvim
-            ];
-        };
+        #    standalonePlugins = with pkgs.vimPlugins; [
+        #        conform-nvim
+        #        mini-nvim
+        #        nvim-jdtls
+        #        nvim-treesitter
+        #        oil-nvim
+        #        snacks-nvim
+        #    ];
+        #};
     };
 
 # Import all your configuration modules here

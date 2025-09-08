@@ -338,6 +338,4 @@
         indent = { enable = false; };
       };
     };
-    plugins.treesitter-refactor.enable = true;
-    plugins.treesitter-context.enable = true;
 }
