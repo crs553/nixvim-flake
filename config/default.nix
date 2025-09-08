@@ -69,6 +69,31 @@
             severity_sort = true,
             })
   '';
+  autoCmd = [
+    {
+      event = [ "TextYankPost" ];
+      pattern = [ "*" ];
+      command = "silent! lua vim.hl.on_yank()";
+    }
+    {
+      event = [ "BufEnter" ];
+      pattern = [ "github.com_*.txt" ];
+      command = "set filetype=markdown";
+    }
+    {
+      event = [ "BufRead" ];
+      pattern = [ "Cargo.toml" ];
+      command = ''
+            vim.api.nvim_create_autocmd("BufRead", {
+            group = vim.api.nvim_create_augroup("CmpSourceCargo", { clear = true }),
+            pattern = "Cargo.toml",
+            callback = function()
+                cmp.setup.buffer({ sources = { { name = "crates" } } })
+            end,
+        })
+      '';
+    }
+  ];
 
   viAlias = true;
   vimAlias = true;
@@ -97,9 +122,11 @@
   # Import all your configuration modules here
   imports = [
     ./plugins/blink-cmp.nix
+    ./plugins/ccc.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
     ./plugins/dap.nix
+    ./plugins/floaterm.nix
     ./plugins/fugitive.nix
     ./plugins/harpoon.nix
     ./plugins/lsp.nix
@@ -109,9 +136,9 @@
     ./plugins/smear.nix
     ./plugins/snacks.nix
     ./plugins/telescope.nix
-    ./plugins/toggleterm.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
+    ./plugins/vimbegood.nix
 
     ./keymap.nix
     ./colorscheme.nix
