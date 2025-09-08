@@ -1,7 +1,7 @@
 [
   {
     mode = "n";
-    key = "<leader>ha";
+    key = "<leader>a";
     action.__raw = "function() require'harpoon':list():add() end";
     options = {
       desc = "Harpoon Add";
@@ -28,7 +28,7 @@
   }
   {
     mode = "n";
-    key = "<leader>h1";
+    key = "<C-h>";
     action.__raw = "function() require('harpoon'):list():select(1) end";
     options = {
       desc = "Harpoon Mark 1";
@@ -37,7 +37,7 @@
   }
   {
     mode = "n";
-    key = "<leader>h2";
+    key = "<C-j>";
     action.__raw = "function() require('harpoon'):list():select(2) end";
     options = {
       desc = "Harpoon Mark 2";
@@ -46,7 +46,7 @@
   }
   {
     mode = "n";
-    key = "<leader>h3";
+    key = "<C-k>";
     action.__raw = "function() require('harpoon'):list():select(3) end";
     options = {
       desc = "Harpoon Mark 3";
@@ -55,7 +55,7 @@
   }
   {
     mode = "n";
-    key = "<leader>h4";
+    key = "<C-l>";
     action.__raw = "function() require('harpoon'):list():select(4) end";
     options = {
       desc = "Harpoon Mark 4";
@@ -64,7 +64,7 @@
   }
   {
     mode = "n";
-    key = "C-e";
+    key = "<C-e>";
     action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
     options = {
       desc = "Harpoon Menu";
