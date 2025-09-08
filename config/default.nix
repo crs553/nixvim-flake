@@ -1,4 +1,20 @@
 {
+
+  globals = {
+    localleader = " ";
+    globalleader = " ";
+  };
+
+  extraConfigLua = ''
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = true,
+      update_in_insert = false,
+      underline = true,
+      severity_sort = true,
+    })
+  '';
+
   # Import all your configuration modules here
   imports = [ 
     ./plugins/dap.nix
@@ -14,6 +30,7 @@
 
     ./keymap.nix
     ./colorscheme.nix
+    ./options.nix
 
   ];
 }
