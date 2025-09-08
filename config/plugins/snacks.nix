@@ -1,5 +1,5 @@
 {
-  snacks = {
+  plugins.snacks = {
     enable = true;
 
     settings = {
