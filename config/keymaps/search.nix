@@ -19,7 +19,7 @@
   }
   {
     mode = "n";
-    key = "<leader>ff";
+    key = "<leader>fd";
     action = "<cmd>lua require('snacks').picker.files()<CR>";
     options = {
       desc = "Files";
