@@ -104,12 +104,14 @@
     ./plugins/harpoon.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
+    ./plugins/markdown-preview.nix
     ./plugins/oil.nix
     ./plugins/smear.nix
     ./plugins/snacks.nix
     ./plugins/telescope.nix
     ./plugins/toggleterm.nix
     ./plugins/treesitter.nix
+    ./plugins/trouble.nix
 
     ./keymap.nix
     ./colorscheme.nix
