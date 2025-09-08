@@ -124,21 +124,36 @@
     ./plugins/blink-cmp.nix
     ./plugins/ccc.nix
     ./plugins/cmp.nix
+    ./plugins/color.nix
+    ./plugins/comfy-line-numbers.nix
     ./plugins/conform.nix
     ./plugins/dap.nix
+    ./plugins/fidget.nix
     ./plugins/floaterm.nix
+    ./plugins/friendly-snippets.nix
     ./plugins/fugitive.nix
+    ./plugins/gitignore.nix
+    ./plugins/gitsigns.nix
     ./plugins/harpoon.nix
+    ./plugins/htms.nix
+    ./plugins/lastplace.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
     ./plugins/markdown-preview.nix
+    ./plugins/molten.nix
+    ./plugins/nix.nix
     ./plugins/oil.nix
+    ./plugins/sleuth.nix
     ./plugins/smear.nix
     ./plugins/snacks.nix
+    ./plugins/snacks.nix
+    ./plugins/tardis.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
     ./plugins/vimbegood.nix
+    ./plugins/wilder.nix
+    ./plugins/wrapping.nix
 
     ./keymap.nix
     ./colorscheme.nix

@@ -1,0 +1,3 @@
+{
+  plugins.wrapping.enable = true;
+}
