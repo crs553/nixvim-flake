@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  treesitter =
+  plugins.treesitter =
     {
       enable = true;
 
