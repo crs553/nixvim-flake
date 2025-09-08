@@ -53,8 +53,8 @@
       ];
     };
   };
-  cmp-cmdline.enable = true;
-  cmp-dap.enable = true;
-  cmp-nvim-lsp.enable = true;
+  plugins.cmp-cmdline.enable = true;
+  plugins.cmp-dap.enable = true;
+  plugins.cmp-nvim-lsp.enable = true;
 
 }
