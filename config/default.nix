@@ -125,6 +125,7 @@
     ./plugins/cmp.nix
     ./plugins/conform.nix
     ./plugins/dap.nix
+    ./plugins/floaterm.nix
     ./plugins/fugitive.nix
     ./plugins/harpoon.nix
     ./plugins/lsp.nix
@@ -134,7 +135,6 @@
     ./plugins/smear.nix
     ./plugins/snacks.nix
     ./plugins/telescope.nix
-    ./plugins/toggleterm.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
 
