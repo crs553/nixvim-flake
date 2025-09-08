@@ -1,7 +1,8 @@
 {
   # Import all your configuration modules here
   imports = [ 
-    ./oil.nix 
+    ./plugins/oil.nix 
+    ./plugins/lualine.nix
 
     ./keymap.nix
 

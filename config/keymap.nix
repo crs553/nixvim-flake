@@ -12,6 +12,6 @@
        key     = "<leader>pv";            # the key you press
        action  = "<CMD>Oil<CR>";     # run the Oil command
        options = { noremap = true; silent = true; };
-  }
-  ]
+    }
+  ];
 }
