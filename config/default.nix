@@ -1,4 +1,9 @@
 {
   # Import all your configuration modules here
-  imports = [ ./bufferline.nix ];
+  imports = [ 
+    ./oil.nix 
+
+    ./keymap.nix
+
+  ];
 }
