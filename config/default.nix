@@ -125,7 +125,6 @@
     ./plugins/ccc.nix
     ./plugins/cmp.nix
     ./plugins/color.nix
-    ./plugins/comfy-line-numbers.nix
     ./plugins/conform.nix
     ./plugins/dap.nix
     ./plugins/fidget.nix
@@ -147,7 +146,6 @@
     ./plugins/smear.nix
     ./plugins/snacks.nix
     ./plugins/snacks.nix
-    ./plugins/tardis.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
