@@ -1,7 +1,7 @@
 [
   {
     mode = "n";
-    key = "<leader>sb";
+    key = "<leader>fb";
     action = "<cmd>lua require('snacks').picker.buffers()<CR>";
     options = {
       desc = "Buffers";
@@ -10,34 +10,16 @@
   }
   {
     mode = "n";
-    key = "<leader>sB";
+    key = "<leader>fB";
     action = "<cmd>require('snacks').picker.git_branches()<CR>";
     options = {
       desc = "Git Branches";
       silent = true;
     };
   }
-  {
+ {
     mode = "n";
-    key = "<leader>se";
-    action = "<cmd>Telescope file_browser<CR>";
-    options = {
-      desc = "Explore files (File Browser)";
-      silent = true;
-    };
-  }
-  {
-    mode = "n";
-    key = "<leader>f";
-    action = "<cmd>lua require('snacks').picker.smart()<CR>";
-    options = {
-      desc = "Find Files";
-      silent = true;
-    };
-  }
-  {
-    mode = "n";
-    key = "<leader>sf";
+    key = "<leader>ff";
     action = "<cmd>lua require('snacks').picker.files()<CR>";
     options = {
       desc = "Files";
@@ -46,7 +28,7 @@
   }
   {
     mode = "n";
-    key = "<leader>sr";
+    key = "<leader>fr";
     action = "<cmd>lua require('snacks').picker.recent()<CR>";
     options = {
       desc = "Find recently edited files";
@@ -55,7 +37,7 @@
   }
   {
     mode = "n";
-    key = "<leader>sh";
+    key = "<leader>fh";
     action = "<cmd>lua require('snacks').picker.help()<CR>";
     options = {
       desc = "Help tags";
@@ -64,7 +46,7 @@
   }
   {
     mode = "n";
-    key = "<leader>st";
+    key = "<leader>fs";
     action = "<cmd>lua require('snacks').picker.grep()<CR>";
     options = {
       desc = "Live Grep";
@@ -73,7 +55,7 @@
   }
   {
     mode = "n";
-    key = "<leader>sp";
+    key = "<leader>fp";
     action = "<cmd>lua require('snacks').picker.projects()<CR>";
     options = {
       desc = "Projects";
@@ -82,19 +64,10 @@
   }
   {
     mode = "n";
-    key = "<leader>sl";
+    key = "<leader>fl";
     action = "<cmd>lua require('snacks').picker.lines()<CR>";
     options = {
       desc = "Lines in current file";
-      silent = true;
-    };
-  }
-  {
-    mode = "n";
-    key = "<leader>sz";
-    action = "<cmd>lua require('snacks').picker.zoxide()<CR>";
-    options = {
-      desc = "Search for projects via zoxide";
       silent = true;
     };
   }
