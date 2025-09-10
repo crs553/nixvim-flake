@@ -121,7 +121,7 @@
 
   # Import all your configuration modules here
   imports = [
-    ./plugins/blink-cmp.nix
+    #./plugins/blink-cmp.nix
     ./plugins/ccc.nix
     ./plugins/cmp.nix
     ./plugins/color.nix

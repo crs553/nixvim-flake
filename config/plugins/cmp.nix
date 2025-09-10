@@ -10,8 +10,8 @@
         "<C-f>" = "cmp.mapping.scroll_docs(4)";
         "<C-n>" = "cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert }";
         "<C-u>" = "cmp.mapping.complete({})";
-        "<C-p>" = "cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert }";
-        "<C-y>" =
+        "<S-Tab>" = "cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert }";
+        "<Tab>" =
           ''cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }, {"i", "c"})'';
         "<C-space>" = ''
           cmp.mapping {
@@ -48,13 +48,26 @@
             show_autosnippets = true;
           };
         }
-        { name = "path"; }
         { name = "buffer"; }
+        { name = "path"; }
+        {
+          name = "dictionary";
+          keyword_length = 2;
+        }
+        { name = "git"; }
+        { name = "calc"; }
       ];
+      experimental = {
+        ghost_text = true;
+      };
     };
   };
   plugins.cmp-cmdline.enable = true;
+  plugins.cmp-buffer.enable = true;
   plugins.cmp-dap.enable = true;
   plugins.cmp-nvim-lsp.enable = true;
+  plugins.cmp-dictionary.enable = true;
+  plugins.cmp-git.enable = true;
+  plugins.cmp-calc.enable = true;
 
 }
