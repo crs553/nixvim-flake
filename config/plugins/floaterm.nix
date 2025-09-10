@@ -2,7 +2,10 @@
   plugins.floaterm = {
     enable = true;
     settings = {
-      height = 0.7;
+      height = 0.9;
+      width = 0.9;
+      wintype = "float";
+      borderchars = "─│─│╭╮╯╰";
       keymap_kill = "<leader>tk";
       keymap_new = "<leader>tn";
       keymap_next = "<leader>tn";
