@@ -132,7 +132,6 @@
     ./plugins/friendly-snippets.nix
     ./plugins/fugitive.nix
     ./plugins/gitignore.nix
-    ./plugins/gitsigns.nix
     ./plugins/harpoon.nix
     ./plugins/htms.nix
     ./plugins/lastplace.nix

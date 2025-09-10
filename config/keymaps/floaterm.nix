@@ -11,7 +11,7 @@
   {
     mode = "n";
     key = "<M-i>";
-    action._raw = "[[<C-\><C-n><cmd>FloatermToggle<CR>]]";
+    action.__raw = "[[<C-\><C-n><cmd>FloatermToggle<CR>]]";
     options = {
       desc = "Toggle Floaterm";
       silent = true;

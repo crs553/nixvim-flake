@@ -8,10 +8,12 @@
       };
 
       bigfile = {
-        enabled = false;
+        enabled = true;
       };
 
-      bufdelete = { };
+      bufdelete = {
+        enabled = true;
+      };
 
       dashboard = {
         enabled = true;
@@ -41,10 +43,6 @@
         '';
       };
 
-      gitbrowse = {
-        enabled = true;
-      };
-
       image = {
         enabled = true;
       };
@@ -54,6 +52,13 @@
       };
 
       input = {
+        enabled = true;
+      };
+      notifier = {
+        enabled = true;
+        timeout = 3000;
+      };
+      picker = {
         enabled = true;
       };
 
@@ -69,13 +74,12 @@
         enabled = true;
       };
 
-      notifier = {
+      statuscolumn = {
         enabled = true;
-        timeout = 3000;
       };
 
-      statuscolumn = {
-        enabled = false;
+      toggle = {
+        enabled = true;
       };
 
       picker = {
