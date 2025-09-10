@@ -136,6 +136,7 @@
     ./plugins/harpoon.nix
     ./plugins/htms.nix
     ./plugins/lastplace.nix
+    ./plugins/lnz.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
     ./plugins/markdown-preview.nix
