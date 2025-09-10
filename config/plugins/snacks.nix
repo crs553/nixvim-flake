@@ -46,7 +46,7 @@
       };
 
       image = {
-        enabled = false;
+        enabled = true;
       };
 
       indent = {
