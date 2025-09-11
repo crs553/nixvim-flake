@@ -10,14 +10,6 @@
   }
   {
     mode = "n";
-    key = "<leader>fc";
-    actions = "<cmd>require('snacks').picker.files({ cwd = vim.fn.stdpath('config') })";
-    options = {
-      desc = "Find config files";
-    };
-  }
-  {
-    mode = "n";
     key = "<leader>fd";
     action = "<cmd>lua require('snacks').picker.files()<CR>";
     options = {
