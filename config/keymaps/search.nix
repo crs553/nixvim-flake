@@ -10,11 +10,10 @@
   }
   {
     mode = "n";
-    key = "<leader>fB";
-    action = "<cmd>require('snacks').picker.git_branches()<CR>";
+    key = "<leader>fc";
+    actions = "<cmd>require('snacks').picker.files({ cwd = vim.fn.stdpath('config') })";
     options = {
-      desc = "Git Branches";
-      silent = true;
+      desc = "Find config files";
     };
   }
   {
@@ -22,7 +21,25 @@
     key = "<leader>fd";
     action = "<cmd>lua require('snacks').picker.files()<CR>";
     options = {
-      desc = "Files";
+      desc = "Find Files";
+      silent = true;
+    };
+  }
+  {
+    mode = "n";
+    key = "<leader>fg";
+    action = "<cmd>lua require('snacks').picker.git_files()<CR>";
+    options = {
+      desc = "Find Git Files";
+      silent = true;
+    };
+  }
+  {
+    mode = "n";
+    key = "<leader>fp";
+    action = "<cmd>lua require('snacks').picker.projects()<CR>";
+    options = {
+      desc = "Projects";
       silent = true;
     };
   }
@@ -31,7 +48,7 @@
     key = "<leader>fr";
     action = "<cmd>lua require('snacks').picker.recent()<CR>";
     options = {
-      desc = "Find recently edited files";
+      desc = "Recents";
       silent = true;
     };
   }
@@ -46,19 +63,19 @@
   }
   {
     mode = "n";
-    key = "<leader>fs";
-    action = "<cmd>lua require('snacks').picker.grep()<CR>";
+    key = "<leader>fp";
+    action = "<cmd>lua require('snacks').picker.projects()<CR>";
     options = {
-      desc = "Live Grep";
+      desc = "Projects";
       silent = true;
     };
   }
   {
     mode = "n";
-    key = "<leader>fp";
-    action = "<cmd>lua require('snacks').picker.projects()<CR>";
+    key = "<leader>fs";
+    action = "<cmd>lua require('snacks').picker.grep()<CR>";
     options = {
-      desc = "Projects";
+      desc = "Live Grep";
       silent = true;
     };
   }
